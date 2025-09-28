@@ -41,8 +41,24 @@
         <script src="jquery.js"></script>
         <script src="jquery2.1.js"></script>
         <script defer src="valentine-confession.js"></script>
+        <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const checkbox = document.getElementById("messageState");
+    const music = document.getElementById("bgMusic");
+
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            music.play();
+        } else {
+            music.pause();
+            music.currentTime = 0;
+        }
+    });
+});
+</script>
     </body>
 </html>
+
 
 
 
